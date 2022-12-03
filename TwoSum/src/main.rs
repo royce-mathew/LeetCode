@@ -11,10 +11,11 @@ impl Solution {
                 for (index, value) in nums.iter().enumerate() {
                     for j in index..nums.len() {
                         if value + nums[j] == target {
-                            return vec![*value as i32, nums[j] as i32];
+                            return vec![*index as i32, j as i32];
                         }
                     }
                 }
+                vec![]
             ```
 
             This way was actually something I didnt think about earlier. When looking at more optimized code I found the rust version of the TwoSum problem.
